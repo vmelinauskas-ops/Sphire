@@ -14,36 +14,36 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-[#c8a96e] mb-6">
-          Project &amp; Construction Management
+          Projektų ir statybų valdymas
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-tight mb-8">
-          We build what
+          Statome tai, ką
           <br />
-          <span className="font-semibold">others imagine.</span>
+          <span className="font-semibold">kiti įsivaizduoja.</span>
         </h1>
         <p className="text-[#a0a0a0] text-base md:text-lg font-light max-w-xl mx-auto mb-12 leading-relaxed">
-          From feasibility to final handover — Sphire manages every phase of
-          your project with precision and accountability.
+          Nuo galimybių studijos iki galutinės perdavimo — Sphire valdo kiekvieną
+          jūsų projekto etapą tiksliai ir atsakingai.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#portfolio"
             className="px-8 py-3.5 bg-[#c8a96e] text-[#0e0e0e] text-sm tracking-widest uppercase font-medium hover:bg-[#d9ba7f] transition-colors duration-200"
           >
-            View Projects
+            Peržiūrėti projektus
           </a>
           <a
             href="#contact"
             className="px-8 py-3.5 border border-[#f0f0f0]/30 text-sm tracking-widest uppercase font-light hover:border-[#f0f0f0] transition-colors duration-200"
           >
-            Get in Touch
+            Susisiekti
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#6b6b6b]">
-        <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase">Slinkti</span>
         <div className="w-px h-8 bg-gradient-to-b from-[#6b6b6b] to-transparent" />
       </div>
     </section>

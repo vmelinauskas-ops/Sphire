@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sphire — Project & Construction Management",
+  title: "Sphire — Projektų ir statybų valdymas",
   description:
-    "Sphire delivers expert project management and construction management services — from concept to completion.",
+    "Sphire teikia ekspertines projektų valdymo ir statybų valdymo paslaugas — nuo idėjos iki perdavimo.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className} h-full`}>
+    <html lang="lt" className={`${inter.className} h-full`}>
       <body className="min-h-full flex flex-col bg-[#0e0e0e] text-[#f0f0f0]">
         {children}
       </body>

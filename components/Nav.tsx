@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#portfolio" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Paslaugos", href: "#services" },
+  { label: "Projektai", href: "#portfolio" },
+  { label: "Apie mus", href: "#about" },
+  { label: "Kontaktai", href: "#contact" },
 ];
 
 export default function Nav() {

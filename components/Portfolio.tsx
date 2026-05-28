@@ -1,32 +1,32 @@
 const projects = [
   {
-    title: "Logistics Centre, Kaunas",
-    category: "Construction Management",
+    title: "Logistikos centras, Kaunas",
+    category: "Statybų valdymas",
     img: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=75",
   },
   {
-    title: "Sports Complex, Vilnius",
-    category: "Project Management",
+    title: "Sporto kompleksas, Vilnius",
+    category: "Projektų valdymas",
     img: "https://images.unsplash.com/photo-1580710624567-9e1a6e0a0c8a?w=800&q=75",
   },
   {
-    title: "Retail Park, Klaipėda",
-    category: "Construction Management",
+    title: "Prekybos parkas, Klaipėda",
+    category: "Statybų valdymas",
     img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=75",
   },
   {
-    title: "Residential Complex, Vilnius",
-    category: "Project Management",
+    title: "Gyvenamųjų namų kompleksas, Vilnius",
+    category: "Projektų valdymas",
     img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=75",
   },
   {
-    title: "Office Headquarters, Kaunas",
-    category: "Construction Management",
+    title: "Biurų būstinė, Kaunas",
+    category: "Statybų valdymas",
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=75",
   },
   {
-    title: "Industrial Facility, Panevėžys",
-    category: "Project Management",
+    title: "Pramoninis objektas, Panevėžys",
+    category: "Projektų valdymas",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=75",
   },
 ];
@@ -38,9 +38,9 @@ export default function Portfolio() {
         {/* Header */}
         <div className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-[#c8a96e] mb-4">
-            Our Work
+            Mūsų darbai
           </p>
-          <h2 className="text-3xl md:text-4xl font-light">Selected Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-light">Atrinkti projektai</h2>
         </div>
 
         {/* Grid */}

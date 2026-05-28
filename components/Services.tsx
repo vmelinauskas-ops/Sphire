@@ -1,51 +1,51 @@
 const services = [
   {
-    category: "Project Management",
+    category: "Projektų valdymas",
     items: [
       {
-        title: "Feasibility & Cost Analysis",
+        title: "Galimybių studija ir kaštų analizė",
         description:
-          "Early-stage budget modelling, site assessments, and preliminary proposals to validate project viability.",
+          "Preliminarus biudžeto modeliavimas, sklypo vertinimas ir pradiniai pasiūlymai projekto gyvybingumo patvirtinimui.",
       },
       {
-        title: "Design Coordination",
+        title: "Projektavimo koordinavimas",
         description:
-          "Technical brief development, architect and engineer coordination, and working drawing oversight.",
+          "Techninių sąlygų rengimas, architektų ir inžinierių koordinavimas bei darbo brėžinių priežiūra.",
       },
       {
-        title: "Permitting & Compliance",
+        title: "Leidimai ir atitiktis",
         description:
-          "Full management of planning approvals, expert reviews, and regulatory submissions.",
+          "Visapusiškas statybos leidimų tvarkymas, ekspertiniai vertinimai ir reglamentiniai teikimai.",
       },
       {
-        title: "Construction Oversight",
+        title: "Statybų priežiūra",
         description:
-          "On-site supervision, progress reporting, and quality assurance throughout the build phase.",
+          "Statybvietės priežiūra, pažangos ataskaitos ir kokybės užtikrinimas visuose statybos etapuose.",
       },
     ],
   },
   {
-    category: "Construction Management",
+    category: "Statybų valdymas",
     items: [
       {
-        title: "Pre-Construction Planning",
+        title: "Pasirengimas statyboms",
         description:
-          "Procurement strategy, contractor selection, and cost optimisation before breaking ground.",
+          "Pirkimų strategija, rangovų atranka ir kaštų optimizavimas prieš pradedant darbus.",
       },
       {
-        title: "Site Management",
+        title: "Statybvietės valdymas",
         description:
-          "Day-to-day execution management, subcontractor coordination, and health &amp; safety compliance.",
+          "Kasdieninis darbų vykdymo valdymas, subrangovų koordinavimas ir darbuotojų saugos užtikrinimas.",
       },
       {
-        title: "Quality Control",
+        title: "Kokybės kontrolė",
         description:
-          "Systematic inspections and defect management to ensure work meets specification at every stage.",
+          "Sistemingi patikrinimai ir defektų valdymas siekiant užtikrinti, kad darbai atitiktų specifikacijas kiekviename etape.",
       },
       {
-        title: "Project Completion",
+        title: "Projekto užbaigimas",
         description:
-          "Snagging, handover documentation, final accounts, and post-completion support.",
+          "Defektų šalinimas, perdavimo dokumentacija, galutinės atsiskaitymai ir pagalba po perdavimo.",
       },
     ],
   },
@@ -58,9 +58,9 @@ export default function Services() {
         {/* Header */}
         <div className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-[#c8a96e] mb-4">
-            What We Do
+            Ką mes darome
           </p>
-          <h2 className="text-3xl md:text-4xl font-light">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-light">Mūsų paslaugos</h2>
         </div>
 
         {/* Two-column grid */}

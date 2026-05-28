@@ -9,25 +9,25 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <p className="text-xl font-semibold tracking-widest uppercase mb-4">Sphire</p>
             <p className="text-sm text-[#6b6b6b] font-light leading-relaxed max-w-xs">
-              Independent project and construction management consultancy
-              delivering precision across every phase.
+              Nepriklausoma projektų ir statybų valdymo konsultacijų įmonė,
+              užtikrinanti tikslumą kiekviename etape.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-[#6b6b6b] mb-4">Services</p>
+            <p className="text-[10px] tracking-[0.25em] uppercase text-[#6b6b6b] mb-4">Paslaugos</p>
             <ul className="space-y-2 text-sm text-[#a0a0a0]">
-              <li>Project Management</li>
-              <li>Construction Management</li>
-              <li>Design Coordination</li>
-              <li>Cost Consultancy</li>
+              <li>Projektų valdymas</li>
+              <li>Statybų valdymas</li>
+              <li>Projektavimo koordinavimas</li>
+              <li>Kaštų konsultavimas</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-[#6b6b6b] mb-4">Contact</p>
+            <p className="text-[10px] tracking-[0.25em] uppercase text-[#6b6b6b] mb-4">Kontaktai</p>
             <ul className="space-y-2 text-sm text-[#a0a0a0]">
               <li>info@sphire.lt</li>
               <li>+370 600 00000</li>
@@ -40,10 +40,10 @@ export default function Footer() {
 
         <div className="border-t border-[#1e1e1e] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-[#3a3a3a]">
-            © {year} Sphire. All rights reserved.
+            © {year} Sphire. Visos teisės saugomos.
           </p>
           <a href="#" className="text-xs text-[#3a3a3a] hover:text-[#6b6b6b] transition-colors">
-            Privacy Policy
+            Privatumo politika
           </a>
         </div>
       </div>

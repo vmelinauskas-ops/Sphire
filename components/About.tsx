@@ -1,8 +1,8 @@
 const stats = [
-  { value: "12+", label: "Years Experience" },
-  { value: "80+", label: "Projects Delivered" },
-  { value: "€200M+", label: "Construction Value" },
-  { value: "100%", label: "On-Time Delivery" },
+  { value: "12+", label: "Metų patirties" },
+  { value: "80+", label: "Įvykdytų projektų" },
+  { value: "€200M+", label: "Statybų vertė" },
+  { value: "100%", label: "Laiku pristatyti" },
 ];
 
 export default function About() {
@@ -13,29 +13,28 @@ export default function About() {
           {/* Text */}
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-[#c8a96e] mb-4">
-              Who We Are
+              Kas mes esame
             </p>
             <h2 className="text-3xl md:text-4xl font-light mb-8 leading-snug">
-              Precision management,
+              Tikslus valdymas
               <br />
-              <span className="font-semibold">from day one.</span>
+              <span className="font-semibold">nuo pirmosios dienos.</span>
             </h2>
             <div className="space-y-5 text-[#a0a0a0] font-light leading-relaxed">
               <p>
-                Sphire is an independent project and construction management
-                consultancy. We work alongside owners, developers, and investors
-                to deliver complex projects on time, within budget, and to the
-                highest standards.
+                Sphire — nepriklausoma projektų ir statybų valdymo konsultacijų
+                įmonė. Dirbame kartu su savininkais, vystytojais ir investuotojais,
+                kad sudėtingi projektai būtų įvykdyti laiku, neviršijant biudžeto
+                ir aukščiausios kokybės standartų.
               </p>
               <p>
-                Our team combines deep technical expertise with rigorous process
-                discipline — covering everything from early feasibility through
-                design coordination, procurement, site management, and final
-                handover.
+                Mūsų komanda jungia gilią techninę kompetenciją su griežta procesų
+                disciplina — nuo pirminės galimybių studijos iki projektavimo
+                koordinavimo, pirkimų, statybvietės valdymo ir galutinės perdavimo.
               </p>
               <p>
-                We act as the single point of accountability on your project, so
-                you retain full visibility without carrying the operational burden.
+                Esame vienas atsakomybės centras jūsų projekte — turite visapusišką
+                matomumą, neperkeldami operacinės naštos sau.
               </p>
             </div>
           </div>

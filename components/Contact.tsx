@@ -37,22 +37,21 @@ export default function Contact() {
           {/* Left */}
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-[#c8a96e] mb-4">
-              Get in Touch
+              Susisiekite
             </p>
             <h2 className="text-3xl md:text-4xl font-light mb-8">
-              Start a conversation
+              Pradėkime pokalbį
             </h2>
             <p className="text-[#6b6b6b] font-light leading-relaxed mb-10">
-              Tell us about your project. We&apos;ll get back to you within one
-              business day.
+              Papasakokite apie savo projektą. Atsakysime per vieną darbo dieną.
             </p>
             <div className="space-y-4 text-sm text-[#a0a0a0]">
               <p>
-                <span className="text-[#6b6b6b] text-xs tracking-widest uppercase block mb-1">Email</span>
+                <span className="text-[#6b6b6b] text-xs tracking-widest uppercase block mb-1">El. paštas</span>
                 info@sphire.lt
               </p>
               <p>
-                <span className="text-[#6b6b6b] text-xs tracking-widest uppercase block mb-1">Phone</span>
+                <span className="text-[#6b6b6b] text-xs tracking-widest uppercase block mb-1">Telefonas</span>
                 +370 600 00000
               </p>
             </div>
@@ -63,57 +62,57 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-[10px] tracking-widest uppercase text-[#6b6b6b] mb-2">
-                  Name
+                  Vardas
                 </label>
                 <input
                   name="name"
                   type="text"
                   required
-                  placeholder="Your name"
+                  placeholder="Jūsų vardas"
                   className="w-full bg-[#161616] border border-[#1e1e1e] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#3a3a3a] focus:outline-none focus:border-[#c8a96e] transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-[10px] tracking-widest uppercase text-[#6b6b6b] mb-2">
-                  Email
+                  El. paštas
                 </label>
                 <input
                   name="email"
                   type="email"
                   required
-                  placeholder="your@email.com"
+                  placeholder="jusu@epastas.lt"
                   className="w-full bg-[#161616] border border-[#1e1e1e] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#3a3a3a] focus:outline-none focus:border-[#c8a96e] transition-colors"
                 />
               </div>
             </div>
             <div>
               <label className="block text-[10px] tracking-widest uppercase text-[#6b6b6b] mb-2">
-                Project Type
+                Projekto tipas
               </label>
               <input
                 name="project_type"
                 type="text"
-                placeholder="e.g. Office building, logistics centre..."
+                placeholder="pvz. Biurų pastatas, logistikos centras..."
                 className="w-full bg-[#161616] border border-[#1e1e1e] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#3a3a3a] focus:outline-none focus:border-[#c8a96e] transition-colors"
               />
             </div>
             <div>
               <label className="block text-[10px] tracking-widest uppercase text-[#6b6b6b] mb-2">
-                Message
+                Žinutė
               </label>
               <textarea
                 name="message"
                 rows={5}
                 required
-                placeholder="Tell us about your project..."
+                placeholder="Papasakokite apie savo projektą..."
                 className="w-full bg-[#161616] border border-[#1e1e1e] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#3a3a3a] focus:outline-none focus:border-[#c8a96e] transition-colors resize-none"
               />
             </div>
 
             <p className="text-[11px] text-[#3a3a3a]">
-              By sending a message you agree to our{" "}
+              Siųsdami žinutę sutinkate su mūsų{" "}
               <a href="#" className="underline hover:text-[#6b6b6b]">
-                Privacy Policy
+                Privatumo politika
               </a>
               .
             </p>
@@ -124,15 +123,15 @@ export default function Contact() {
               className="px-8 py-3.5 bg-[#c8a96e] text-[#0e0e0e] text-sm tracking-widest uppercase font-medium hover:bg-[#d9ba7f] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "sending"
-                ? "Sending…"
+                ? "Siunčiama…"
                 : status === "sent"
-                ? "Message Sent"
-                : "Send Message"}
+                ? "Žinutė išsiųsta"
+                : "Siųsti žinutę"}
             </button>
 
             {status === "error" && (
               <p className="text-red-400 text-sm">
-                Something went wrong. Please try again or email us directly.
+                Kažkas nutiko. Bandykite dar kartą arba rašykite mums el. paštu.
               </p>
             )}
           </form>

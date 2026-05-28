@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paslaugos — Sphire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      text-align: center;
+      padding: 52px 24px 44px;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .page-header .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
+    .page-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #111;
+    }
+
+    /* ── Two-column layout ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 137px);
+      position: relative;
+    }
+
+    /* Center vertical divider */
+    .layout::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #e0e0e0;
+      transform: translateX(-0.5px);
+      pointer-events: none;
+    }
+
+    /* ── Columns ── */
+    .col {
+      padding: 52px 0;
+    }
+    .col-left {
+      background: #fff;
+      padding-left: 52px;
+    }
+    .col-right {
+      background: #f5f5f5;
+      padding-right: 52px;
+    }
+
+    /* ── Column titles ── */
+    .col-title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #111;
+      margin-bottom: 36px;
+    }
+    .col-left .col-title {
+      text-align: right;
+      padding-right: 72px; /* offset for icon + dash */
+    }
+    .col-right .col-title {
+      text-align: left;
+      padding-left: 72px;
+    }
+
+    /* ── Items ── */
+    .item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
+
+    /* LEFT: [text ‣] [dash] [icon] */
+    .col-left .item    { flex-direction: row; }
+    .col-left .text    { flex: 1; text-align: right; padding-right: 12px; }
+    .col-left .dash    { flex-shrink: 0; width: 20px; align-self: center; border-bottom: 1px solid #d5d5d5; margin-bottom: 1px; }
+    .col-left .icon-wrap { flex-shrink: 0; width: 52px; height: 40px; display: flex; align-items: center; justify-content: center; }
+
+    /* RIGHT: [icon] [dash] [‣ text] */
+    .col-right .item    { flex-direction: row; }
+    .col-right .icon-wrap { flex-shrink: 0; width: 52px; height: 40px; display: flex; align-items: center; justify-content: center; }
+    .col-right .dash    { flex-shrink: 0; width: 20px; align-self: center; border-bottom: 1px solid #d5d5d5; margin-bottom: 1px; }
+    .col-right .text    { flex: 1; text-align: left; padding-left: 12px; }
+
+    /* ── Text ── */
+    .item-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.35;
+      margin-bottom: 7px;
+    }
+
+    .sub-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 14px;
+      margin-top: 4px;
+    }
+    .col-left .sub-items { direction: rtl; }
+
+    .sub-item {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: #b0b0b0;
+      line-height: 1.5;
+      direction: ltr;
+    }
+    .col-left .sub-item { text-align: right; }
+    .col-right .sub-item { text-align: left; }
+
+    /* ── SVG icons ── */
+    .icon-wrap svg {
+      width: 22px;
+      height: 22px;
+      stroke: #c8c8c8;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 760px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .layout::after { display: none; }
+
+      .col-left, .col-right {
+        padding: 40px 24px;
+      }
+      .col-left .col-title,
+      .col-right .col-title {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      /* mirror left items on mobile */
+      .col-left .item    { flex-direction: row-reverse; }
+      .col-left .text    { text-align: left; padding-right: 0; padding-left: 12px; }
+      .col-left .sub-items { direction: ltr; }
+      .col-left .sub-item  { text-align: left; }
+
+      .sub-items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <p class="eyebrow">Sphire</p>
+  <h1>Mūsų paslaugos</h1>
+</div>
+
+<div class="layout">
+
+  <!-- ══════════════════════════════════
+       LEFT COLUMN — Projektų valdymas
+  ══════════════════════════════════ -->
+  <div class="col col-left">
+    <h2 class="col-title">Projektų valdymas</h2>
+
+    <!-- 1 · Projektiniai pasiūlymai -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Projektiniai pasiūlymai</div>
+        <div class="sub-items">
+          <span class="sub-item">Projektavimo užduotis</span>
+          <span class="sub-item">Statybiniai tyrinėjimai</span>
+          <span class="sub-item">Visuomenės informavimas</span>
+          <span class="sub-item">Prisijungimo sąlygos</span>
+          <span class="sub-item">Detalaus plano koregavimas</span>
+          <span class="sub-item">Specialieji reikalavimai</span>
+        </div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Lightbulb -->
+        <svg viewBox="0 0 24 24">
+          <path d="M9 18h6M10 21h4"/>
+          <path d="M12 2a7 7 0 0 1 5.2 11.8c-.4.5-.7 1-.9 1.5L16 18H8l-.3-2.7c-.2-.5-.5-1-.9-1.5A7 7 0 0 1 12 2z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2 · Techninis projektas -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Techninis projektas</div>
+        <div class="sub-items">
+          <span class="sub-item">Projekto sprendinių optimizavimas</span>
+          <span class="sub-item">Statybos kaštų kontrolė</span>
+          <span class="sub-item">Projektavimo darbų kokybės kontrolė</span>
+          <span class="sub-item">Konsultavimas</span>
+        </div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Blueprint / drafting -->
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+          <line x1="3" y1="9" x2="21" y2="9"/>
+          <line x1="3" y1="15" x2="21" y2="15"/>
+          <line x1="9" y1="3" x2="9" y2="21"/>
+          <line x1="15" y1="3" x2="15" y2="21"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 3 · Projekto ekspertizė -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Projekto ekspertizė</div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Magnifying glass -->
+        <svg viewBox="0 0 24 24">
+          <circle cx="10.5" cy="10.5" r="7.5"/>
+          <line x1="21" y1="21" x2="16" y2="16"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 4 · Statybą leidžiantis dokumentas -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Statybą leidžiantis dokumentas</div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Document / certificate -->
+        <svg viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="8" y1="13" x2="16" y2="13"/>
+          <line x1="8" y1="17" x2="12" y2="17"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 5 · Darbo projektas -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Darbo projektas</div>
+        <div class="sub-items">
+          <span class="sub-item">Projekto sprendinių optimizavimas</span>
+          <span class="sub-item">Statybos kaštų kontrolė</span>
+          <span class="sub-item">Projektavimo darbų kokybės kontrolė</span>
+          <span class="sub-item">Konsultavimas</span>
+        </div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Briefcase -->
+        <svg viewBox="0 0 24 24">
+          <rect x="2" y="7" width="20" height="14" rx="2"/>
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          <line x1="12" y1="12" x2="12" y2="16"/>
+          <line x1="10" y1="14" x2="14" y2="14"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 6 · Projekto vykdymo priežiūra -->
+    <div class="item">
+      <div class="text">
+        <div class="item-title">Projekto vykdymo priežiūra</div>
+      </div>
+      <div class="dash"></div>
+      <div class="icon-wrap">
+        <!-- Eye -->
+        <svg viewBox="0 0 24 24">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    </div>
+
+  </div><!-- /col-left -->
+
+  <!-- ══════════════════════════════════
+       RIGHT COLUMN — Statybų valdymas
+  ══════════════════════════════════ -->
+  <div class="col col-right">
+    <h2 class="col-title">Statybų valdymas</h2>
+
+    <!-- 1 · Pasirengimo etapas -->
+    <div class="item">
+      <div class="icon-wrap">
+        <!-- Clipboard / checklist -->
+        <svg viewBox="0 0 24 24">
+          <path d="M9 2h6a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2z"/>
+          <path d="M6 3H5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1"/>
+          <polyline points="9 12 11 14 15 10"/>
+          <line x1="9" y1="17" x2="15" y2="17"/>
+        </svg>
+      </div>
+      <div class="dash"></div>
+      <div class="text">
+        <div class="item-title">Pasirengimo etapas</div>
+        <div class="sub-items">
+          <span class="sub-item">Projekto analizė ir sprendinių optimizavimas</span>
+          <span class="sub-item">Statybos darbų rangovo parinkimo konkursas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 · Statybos darbai -->
+    <div class="item">
+      <div class="icon-wrap">
+        <!-- Tower crane -->
+        <svg viewBox="0 0 24 24">
+          <line x1="11" y1="2" x2="11" y2="22"/>
+          <line x1="11" y1="5" x2="21" y2="10"/>
+          <line x1="11" y1="5" x2="4"  y2="5"/>
+          <line x1="11" y1="10" x2="21" y2="10"/>
+          <line x1="21" y1="10" x2="21" y2="17"/>
+          <rect x="18" y="17" width="6" height="4" rx="0.5"/>
+        </svg>
+      </div>
+      <div class="dash"></div>
+      <div class="text">
+        <div class="item-title">Statybos darbai</div>
+        <div class="sub-items">
+          <span class="sub-item">Kalendorinio grafiko kontrolė</span>
+          <span class="sub-item">Statybos kaštų kontrolė</span>
+          <span class="sub-item">Statybos darbų kokybės kontrolė</span>
+          <span class="sub-item">Konsultavimas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 · Statybos techninė priežiūra -->
+    <div class="item">
+      <div class="icon-wrap">
+        <!-- Monitor / technical screen -->
+        <svg viewBox="0 0 24 24">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <line x1="8"  y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <polyline points="8 10 11 13 16 8"/>
+        </svg>
+      </div>
+      <div class="dash"></div>
+      <div class="text">
+        <div class="item-title">Statybos techninė priežiūra</div>
+      </div>
+    </div>
+
+    <!-- 4 · Statybos užbaigimas -->
+    <div class="item">
+      <div class="icon-wrap">
+        <!-- Shield with checkmark -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L4 6v6c0 4.8 3.6 9.3 8 10.3C16.4 21.3 20 16.8 20 12V6l-8-4z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <div class="dash"></div>
+      <div class="text">
+        <div class="item-title">Statybos užbaigimas</div>
+      </div>
+    </div>
+
+  </div><!-- /col-right -->
+
+</div><!-- /layout -->
+
+</body>
+</html>
